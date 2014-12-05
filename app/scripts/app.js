@@ -10,12 +10,14 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
+  .constant('FIREBASE_URL', 'https://wafflepress.firebaseio.com/')
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
-      })
-  })
+      });
+  });
