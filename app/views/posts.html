@@ -35,7 +35,7 @@
       </div>
       <div>
         <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span> &mdash;
-        <button ng-if="signedIn()" class="btn btn-xs btn-danger" ng-click="deletePost(post)">Delete</button>
+        <button ng-if="user.uid === post.creatorUID" class="btn btn-xs btn-danger" ng-click="deletePost(post)">Delete</button>
       </div>
     </div>
   </div>
