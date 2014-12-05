@@ -4,7 +4,7 @@
 /* exported app */
 
 var app = angular
-  .module('angularCmsApp', [
+  .module('wafflePress', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
