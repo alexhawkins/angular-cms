@@ -1,35 +1,21 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name angularCmsApp
- * @description
- * # angularCmsApp
- *
- * Main module of the application.
- */
-angular
+/* global app:true */
+/* exported app */
+
+var app = angular
   .module('angularCmsApp', [
     'ngAnimate',
-    'ngAria',
     'ngCookies',
-    'ngMessages',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  })
